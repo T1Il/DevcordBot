@@ -43,7 +43,12 @@ class JavadocCommand : AbstractJavadocCommand() {
             else -> {
                 val type = parseType(args.first(), context) ?: return
                 val version = DocumentedVersion.values().firstOrNull { it.humanName == args[1] }
+<<<<<<< HEAD
                     ?: return context.respond(Embeds.info("Ungültige Version!", "Bitte gib eine gültige Version an"))
+=======
+                    ?: return context.respond(Embeds.info("Ungültige Version!", "Bitte gebe eine gültige Version an"))
+
+>>>>>>> 192a339aca9f0d890e6057fa3211eda50cbb3c3a
                         .queue()
                 if (version.docType == type) {
                     return context.respond(
